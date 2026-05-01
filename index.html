@@ -5,17 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio | Christian Arthur</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="JavaScript" href="inte.js">
 </head>
 <body>
  </html>
   <header class="herop">
-    <nav class="nav">
     <div class="logo"><span>C</span>A</div>
-
     <div class="menu-toggle">☰</div>
     <nav class="menu">
-   
-    <ul class="menu">
+      <ul>
       <li><a href="#inicio">Início</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#habilidades">Habilidades</a></li>
@@ -23,8 +21,6 @@
       <li><a href="#contato">Contato</a></li>
     </ul>
     </nav>
-   </nav>
-   
   </header>
   <section id="inicio" >
   <header class="hero">
@@ -189,6 +185,21 @@ window.addEventListener('scroll', () => {
     if (top < window.innerHeight - 50) {
       el.classList.add('show');
     }
+  });
+});
+</script>
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const links = document.querySelectorAll('.menu a');
+
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('active');
   });
 });
 </script>

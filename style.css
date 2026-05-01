@@ -15,11 +15,15 @@
       line-height: 1.7;
       margin: 0;
     }
-    header {
-      background: #111;
-      padding: 10px;
-      color: white;
-    }
+    /* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #111;
+  color: white;
+}
 
     .container {
       max-width: 1000px;
@@ -49,6 +53,72 @@
       border: 2px solid rgb(9, 41, 110);
       border-radius: 2px;
     }
+    .menu {top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+position: fixed;
+}
+   
+    /* BOTÃO MENU (hambúrguer) */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none; /* some no desktop */
+  z-index: 1001;
+}
+
+.menu a:hover {
+  color: #00aaff;
+}
+/* ===================== */
+/* MOBILE                */
+/* ===================== */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.95);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.4s;
+  }
+
+  .menu.active {
+    left: 0;
+    z-index: 9999;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .menu a {
+    font-size: 24px;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s;
+  }
+
+  .menu.active a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
     
     /* Logo */
     .logo {
@@ -70,13 +140,13 @@
   align-items: center;
 }
  /*  MENU */
-   .menu {
+   .menu ul {
     display: flex;
     gap: 30px;
     justify-self: right;
     padding: 0;
     list-style: none;
-     
+    position: fixed;  
    }
    .menu a {
     text-decoration: none;
@@ -85,35 +155,6 @@
     position: relative;
     
    }
-   .menu a.active{
-    color: #00bfff;
-   }
-   .menu a.active::after{
-    width:100%;
-   }
-   .menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-} 
-
 
    /* efeito de linhas */
    .menu a::after {
