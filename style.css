@@ -103,19 +103,18 @@
    }
 
     /* HERO */
-    html {
-  scroll-behavior: smooth;
-}
-    .hero {
+ .hero {
       
       min-height: 100vh;
-      gap: 50px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 40px;
+
       background: #0d1342;
-      padding: 100px 50px;
+      padding: 100px 20px;
     }
+
    .hero-image img {
   width: 300px;
   border-radius: 50%;
@@ -130,10 +129,15 @@
 }
 .hero-content {
   animation: fadeLeft 1s ease;
+  max-width: 500px;
+  width: 100%;
 }
 
 .hero-image {
   animation: fadeRight 1s ease;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @keyframes fadeLeft {
@@ -171,7 +175,8 @@
 }
     /* texto */
     .hero-content {
-      max-width: 50%;
+      max-width: 500px;
+  width: 100%;
       
     }
 
@@ -252,6 +257,11 @@ background-color: #060541;
    box-shadow: 0 0 40px #00bfff;
   
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
     /* SOBRE */
 
@@ -263,18 +273,27 @@ background-color: #060541;
     }
 
     /* CARDS */
-    img {
-  max-width: 100%;
-  height: auto;
-}
     .card {
-      width: 100%;
+      background: #11193f;
+      border-radius: 24px;
+      padding: 30px;
+      width: 300px;
+      text-align: center;
+      
+      /* animacoes */
   opacity: 0;
   transform: translateY(20px);
-  transition: 0.10s;
+  transition: 0.10s ease;
 }
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:hover {
+      transform: translateY(-6px);
+    }
+
 .card img {
-  width: 100%;
   margin-bottom: 10px;
   margin-bottom: 10px;
 }
@@ -296,45 +315,43 @@ background-color: #060541;
 .progress.css { width: 60%; }
 .progress.js { width: 100%; }
 
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
+/* tablet */
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* celular */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
-
-    .card {
-      background: #11193f;
-      border-radius: 24px;
-      padding: 30px;
-      width: 300px;
-      text-align: center;
-      transition: 0.3s;
-    }
-    
     #contato .card img {
       width: 40px;
       height: 40px;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
     }
 
     .card h3 {
