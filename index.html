@@ -27,7 +27,7 @@
   <header class="hero">
     
     <div class="container"> 
-      <h1>Olá, eu sou <br> <span>Christian Arthur </span></h1>
+      <h1>Eu crio sites rápidos e modernos </h1>
       <h2>Front-End Developer | HTML • CSS • JavaScript</h2>
 
       <p>
@@ -36,15 +36,34 @@
        
       <div class="hero-buttons">
       <a href="#projetos" class="btn">Ver Projetos</a>
-      <a href="#contato" class="btn-outline">Fale Comigo</a>
+      <a href="https://wa.me/5531991420064" class="btn-outline">Fale Comigo 💬</a>
     </div>
   </div>
     <div class="hero-image">
-    <img src="videos e fotos/baixados (13).jpg" alt="Foto de perfil">
+    <img src="imagens/baixados (13).jpg" alt="foto perfil">
   </div>
   
   </header>
   </section>
+  <section>
+  <h2>Como eu trabalho</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1. Entendimento</h3>
+      <p>Analiso sua necessidade e objetivo.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Desenvolvimento</h3>
+      <p>Crio um layout moderno e funcional.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. Entrega</h3>
+      <p>Site pronto, rápido e responsivo.</p>
+    </div>
+  </div>
+</section>
   <main class="container">
 
     <section id="sobre"  class="sobre">
@@ -65,18 +84,30 @@
 
       <div class="grid" >
         <div class="card">
+          <img src="imagens/htmlicon.png" alt="html">
           <h3>HTML</h3>
           <p>Estrutura e organização de páginas web.</p>
-        </div>
+          <div class="bar">
+    <div class="progress html"></div>
+    </div>
+          </div>
 
         <div class="card">
+          <img src="imagens/css-3_5968242.png" alt="CSS">
           <h3>CSS</h3>
           <p>Estilização moderna e layouts responsivos.</p>
+          <div class="bar">
+    <div class="progress css"></div>
+    </div>
         </div>
 
         <div class="card">
+          <img src="imagens/javascript-2038874-1720087.webp" alt="JS">
           <h3>JavaScript</h3>
           <p>Interatividade e funcionalidades dinâmicas.</p>
+          <div class="bar">
+    <div class="progress js"></div>
+    </div>
         </div>
       </div>
     </section>
@@ -86,8 +117,9 @@
 
       <div class="grid">
         <div class="card">
-          <h3>Landing Page Streamer</h3>
+          <h3>Landing Page Barbearia</h3>
           <p>Projeto focado em design moderno e presença digital forte.</p>
+         
         </div>
 
         <div class="card">
@@ -106,7 +138,8 @@
       <h2>Contato</h2>
 
       <div class="grid">
-        <div class="card">
+        <div class="card" >
+          <img src="imagens/Mail.jpg" alt="email">
           <h3>Email</h3>
           <p>
             <a href="mailto:christianarthuryag@gmail.com">
@@ -116,7 +149,8 @@
         </div>
 
         <div class="card">
-          <h3>LinkedIn</h3>
+          <img src="imagens/LinkedIn.jpg" alt="Linkediz">
+          <h3>Linkedin</h3>
           <p>
             <a href="https://www.linkedin.com/in/christian-arthur-6a30262a4/" target="_blank">
               Meu LinkedIn
@@ -125,6 +159,7 @@
         </div>
 
         <div class="card">
+          <img src="imagens/Comandos Git mais utilizados e como configurar.jpg" alt="">
           <h3>GitHub</h3>
           <p>
             <a href="https://github.com/christianarthuryag-boop" target="_blank">
@@ -142,31 +177,20 @@
   </footer>
 
   <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".menu a");
+const elements = document.querySelectorAll('.card');
 
-    window.addEventListener("scroll", () => { 
-      let current = "";
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
-      navLinks.forEach(link => {
-        link.classlist.remove("active");
-        if (link.getAttribute("href") === "#" + current ) {
-          link.classList.add("active");
-      }
-    });
-    });
-    
-    
-     
-  </script>
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+
+    if (top < window.innerHeight - 50) {
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+<a href="https://wa.me/55SEUNUMERO" class="whatsapp">
+📞</a>
 
 </body>
 </html>
