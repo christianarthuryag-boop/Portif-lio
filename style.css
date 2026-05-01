@@ -333,10 +333,11 @@ img {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 80px 20px;
+    gap: 30px;
   }
 
   .hero-image {
+    order: -1; /* joga imagem pra cima */
     justify-content: center;
   }
 
@@ -344,11 +345,7 @@ img {
     max-width: 100%;
   }
 }
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
+
     #contato .card img {
       width: 40px;
       height: 40px;
