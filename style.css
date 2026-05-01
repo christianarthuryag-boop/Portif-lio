@@ -18,7 +18,7 @@
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 0 20px;
+    
     }
 
     section {
@@ -277,7 +277,7 @@ img {
       background: #11193f;
       border-radius: 24px;
       padding: 30px;
-      width: 300px;
+      width: 100%;
       text-align: center;
       
       /* animacoes */
