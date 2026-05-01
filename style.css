@@ -398,36 +398,6 @@ img {
   }
 }
 
-/* celular */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .hero-image {
-    order: -1; /* joga imagem pra cima */
-    justify-content: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-  }
-}
-
-    #contato .card img {
-      margin: 0 auto 10px;
-      width: 40px;
-      height: 40px;
-      display: block;
-    }
-
-    .card h3 {
-      color: #ffffff;
-      margin-bottom: 10px;
-    }
-
     /* CONTATO */
 
     
