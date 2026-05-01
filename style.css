@@ -347,8 +347,10 @@ img {
 }
 
     #contato .card img {
+      margin: 0 auto 10px;
       width: 40px;
       height: 40px;
+      display: block;
     }
 
     .card h3 {
@@ -358,9 +360,7 @@ img {
 
     /* CONTATO */
 
-    .contato .card {
-      width: 250px;
-    }
+    
 
     .contato a {
       color: #7bd3ff;
