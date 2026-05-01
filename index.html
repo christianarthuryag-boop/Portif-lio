@@ -11,6 +11,9 @@
   <header class="herop">
     <nav class="nav">
     <div class="logo"><span>C</span>A</div>
+
+    <div class="menu-toggle">☰</div>
+<ul class="menu">
    
     <ul class="menu">
       <li><a href="#inicio">Início</a></li>
@@ -35,7 +38,7 @@
       </p>
        
       <div class="hero-buttons">
-      <a href="#projetos" class="btn">Ver Projetos</a>
+      <a href="#projetos" class="btn">Ver Projetos 🚀</a>
       <a href="https://wa.me/5531991420064" class="btn-outline">Fale Comigo 💬</a>
     </div>
   </div>
@@ -189,6 +192,15 @@ window.addEventListener('scroll', () => {
   });
 });
 </script>
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+</script>
+
 <a href="https://wa.me/5531991420064" class="whatsapp">
 📞</a>
 
