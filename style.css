@@ -13,6 +13,12 @@
       color: #e8edf7;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.7;
+      margin: 0;
+    }
+    header {
+      background: #111;
+      padding: 10px;
+      color: white;
     }
 
     .container {
@@ -42,9 +48,8 @@
     .herop {
       border: 2px solid rgb(9, 41, 110);
       border-radius: 2px;
-      
-     
     }
+    
     /* Logo */
     .logo {
       text-align: center;
@@ -64,7 +69,7 @@
   justify-content: space-between;
   align-items: center;
 }
-/*  MENU */
+ /*  MENU */
    .menu {
     display: flex;
     gap: 30px;
@@ -107,7 +112,9 @@
   .menu-toggle {
     display: block;
   }
-}
+} 
+
+
    /* efeito de linhas */
    .menu a::after {
     content: "";
