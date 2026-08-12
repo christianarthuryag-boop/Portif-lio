@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,17 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
+
+  <div class="bg-anim" aria-hidden="true">
+    <span class="bg-grid"></span>
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
   <header class="herop">
     <div class="logo"><span>C</span>A</div>
-    <div class="menu-toggle">☰</div>
+    <div class="menu-toggle" aria-label="Abrir menu">☰</div>
     <nav class="menu">
       <ul>
       <li><a href="#inicio">Início</a></li>
@@ -112,22 +119,80 @@
     <section id="projetos">
       <h2>Meus Projetos</h2>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Landing Page Barbearia</h3>
-          <p>Projeto focado em design moderno e presença digital forte.</p>
-         
-        </div>
+      <div class="grid projetos-grid">
+        <article class="card projeto">
+          <div class="projeto-capa capa-barbearia" aria-hidden="true">
+            <div class="capa-browser">
+              <span class="capa-ponto"></span>
+              <span class="capa-ponto"></span>
+              <span class="capa-ponto"></span>
+            </div>
+            <div class="capa-mock">
+              <div class="mock-logo"></div>
+              <div class="mock-linha"></div>
+              <div class="mock-botao"></div>
+            </div>
+          </div>
+          <div class="projeto-body">
+            <h3>Landing Page Barbearia</h3>
+            <p>Projeto focado em design moderno e presença digital forte.</p>
+            <div class="projeto-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <a class="btn" href="https://github.com/christianarthuryag-boop/barbearia-landing" target="_blank" rel="noopener">Ver Projeto</a>
+          </div>
+        </article>
 
-        <div class="card">
-          <h3>Clone Netflix</h3>
-          <p>Prática de responsividade e estrutura visual profissional.</p>
-        </div>
+        <article class="card projeto">
+          <div class="projeto-capa capa-netflix" aria-hidden="true">
+            <div class="capa-browser">
+              <span class="capa-ponto"></span>
+              <span class="capa-ponto"></span>
+              <span class="capa-ponto"></span>
+            </div>
+            <div class="capa-mock">
+              <div class="mock-logo netflix"></div>
+              <div class="mock-posters">
+                <span class="mock-poster"></span>
+                <span class="mock-poster"></span>
+                <span class="mock-poster"></span>
+              </div>
+            </div>
+          </div>
+          <div class="projeto-body">
+            <h3>Clone Netflix</h3>
+            <p>Prática de responsividade e estrutura visual profissional.</p>
+            <div class="projeto-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <a class="btn" href="https://github.com/christianarthuryag-boop/netflix-clone" target="_blank" rel="noopener">Ver Projeto</a>
+          </div>
+        </article>
 
-        <div class="card">
-          <h3>Página de Barbearia</h3>
-          <p>Landing page comercial voltada para negócios locais.</p>
-        </div>
+        <article class="card projeto">
+          <div class="projeto-capa capa-barber" aria-hidden="true">
+            <div class="capa-browser">
+              <span class="capa-ponto"></span>
+              <span class="capa-ponto"></span>
+              <span class="capa-ponto"></span>
+            </div>
+            <div class="capa-mock">
+              <div class="mock-banner"></div>
+              <div class="mock-cards2">
+                <span class="mock-card"></span>
+                <span class="mock-card"></span>
+              </div>
+            </div>
+          </div>
+          <div class="projeto-body">
+            <h3>Página de Barbearia</h3>
+            <p>Landing page comercial voltada para negócios locais.</p>
+            <div class="projeto-tags">
+              <span>HTML</span><span>CSS</span>
+            </div>
+            <a class="btn" href="https://github.com/christianarthuryag-boop/barbearia-pagina" target="_blank" rel="noopener">Ver Projeto</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -173,34 +238,7 @@
     <p>© 2026 Christian Arthur — Todos os direitos reservados.</p>
   </footer>
 
-  <script>
-const elements = document.querySelectorAll('.card');
-
-window.addEventListener('scroll', () => {
-  elements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-
-    if (top < window.innerHeight - 50) {
-      el.classList.add('show');
-    }
-  });
-});
-</script>
-<script>
-const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-const links = document.querySelectorAll('.menu a');
-
-toggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
-});
-
-links.forEach(link => {
-  link.addEventListener('click', () => {
-    menu.classList.remove('active');
-  });
-});
-</script>
+  <script src="inte.js"></script>
 <a href="https://wa.me/5531991420064" class="whatsapp">
 📞</a>
 
