@@ -44,7 +44,7 @@
         <a href="https://wa.me/5531991420064" target="_blank" rel="noopener" class="btn-outline">Fale Comigo 💬</a>
       </div>
       <div class="hero-stats">
-        <div><strong>3+</strong><small>projetos</small></div>
+        <div><strong>2</strong><small>projetos</small></div>
         <div><strong>3</strong><small>tecnologias</small></div>
         <div><strong>100%</strong><small>responsivo</small></div>
       </div>
@@ -127,77 +127,36 @@
       <h2>Meus Projetos</h2>
       <p class="section-sub">Uma seleção do que venho construindo. Demos e código completo via contato.</p>
       <div class="grid projetos-grid">
-        <article class="card projeto reveal">
-          <div class="projeto-capa capa-barbearia" aria-hidden="true">
-            <div class="capa-browser">
-              <span class="capa-ponto"></span>
-              <span class="capa-ponto"></span>
-              <span class="capa-ponto"></span>
-            </div>
-            <div class="capa-mock">
-              <div class="mock-logo"></div>
-              <div class="mock-linha"></div>
-              <div class="mock-botao"></div>
-            </div>
-          </div>
+        <!-- Projeto demonstrativo: Corte Prime (preview de vídeo + modal).
+             Vídeo esperado em: assets/videos/corte-prime-demo.mp4 -->
+        <article class="card projeto reveal" data-demo="corte-prime">
+          <button type="button" class="projeto-preview" data-open-modal aria-label="Abrir demonstração em vídeo do projeto Corte Prime">
+            <span class="projeto-preview__fallback capa-demo" aria-hidden="true">
+              <span class="capa-browser">
+                <span class="capa-ponto"></span>
+                <span class="capa-ponto"></span>
+                <span class="capa-ponto"></span>
+              </span>
+              <span class="capa-mock">
+                <span class="mock-logo"></span>
+                <span class="mock-linha"></span>
+                <span class="mock-botao"></span>
+              </span>
+            </span>
+            <video class="projeto-preview__video" data-preview muted loop playsinline preload="none" tabindex="-1" aria-hidden="true">
+              <source src="assets/videos/corte-prime-demo.mp4" type="video/mp4" />
+            </video>
+            <span class="preview-play" aria-hidden="true">▶</span>
+            <span class="preview-badge">Demonstração</span>
+          </button>
           <div class="projeto-body">
-            <h3>Landing Page Barbearia</h3>
-            <p>Projeto focado em design moderno e presença digital forte.</p>
+            <h3>Corte Prime <span class="demo-tag">Demo</span></h3>
+            <p class="projeto-sub">Demonstração de site comercial</p>
+            <p>Landing page profissional para negócios locais.</p>
             <div class="projeto-tags">
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
-            <a class="btn btn-small" href="https://wa.me/5531991420064?text=Quero%20ver%20a%20demo%20da%20Landing%20Page%20Barbearia" target="_blank" rel="noopener">Pedir demo 💬</a>
-          </div>
-        </article>
-
-        <article class="card projeto reveal">
-          <div class="projeto-capa capa-netflix" aria-hidden="true">
-            <div class="capa-browser">
-              <span class="capa-ponto"></span>
-              <span class="capa-ponto"></span>
-              <span class="capa-ponto"></span>
-            </div>
-            <div class="capa-mock">
-              <div class="mock-logo netflix"></div>
-              <div class="mock-posters">
-                <span class="mock-poster"></span>
-                <span class="mock-poster"></span>
-                <span class="mock-poster"></span>
-              </div>
-            </div>
-          </div>
-          <div class="projeto-body">
-            <h3>Clone Netflix</h3>
-            <p>Prática de responsividade e estrutura visual profissional.</p>
-            <div class="projeto-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
-            </div>
-            <a class="btn btn-small" href="https://wa.me/5531991420064?text=Quero%20ver%20a%20demo%20do%20Clone%20Netflix" target="_blank" rel="noopener">Pedir demo 💬</a>
-          </div>
-        </article>
-
-        <article class="card projeto reveal">
-          <div class="projeto-capa capa-barber" aria-hidden="true">
-            <div class="capa-browser">
-              <span class="capa-ponto"></span>
-              <span class="capa-ponto"></span>
-              <span class="capa-ponto"></span>
-            </div>
-            <div class="capa-mock">
-              <div class="mock-banner"></div>
-              <div class="mock-cards2">
-                <span class="mock-card"></span>
-                <span class="mock-card"></span>
-              </div>
-            </div>
-          </div>
-          <div class="projeto-body">
-            <h3>Página de Barbearia</h3>
-            <p>Landing page comercial voltada para negócios locais.</p>
-            <div class="projeto-tags">
-              <span>HTML</span><span>CSS</span>
-            </div>
-            <a class="btn btn-small" href="https://wa.me/5531991420064?text=Quero%20ver%20a%20demo%20da%20P%C3%A1gina%20de%20Barbearia" target="_blank" rel="noopener">Pedir demo 💬</a>
+            <button type="button" class="btn btn-small" data-open-modal>Ver demonstração</button>
           </div>
         </article>
 
@@ -270,6 +229,35 @@
   </footer>
 
   <a href="https://wa.me/5531991420064" target="_blank" rel="noopener" class="whatsapp" aria-label="Falar no WhatsApp">💬</a>
+
+  <!-- Modal da demonstração Corte Prime (vídeo esperado em: assets/videos/corte-prime-demo.mp4) -->
+  <div class="modal" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title" aria-hidden="true" hidden>
+    <div class="modal__box">
+      <button type="button" class="modal__close" data-close-modal aria-label="Fechar demonstração">✕</button>
+      <video class="modal__video" controls playsinline preload="none" data-modal-video>
+        <source src="assets/videos/corte-prime-demo.mp4" type="video/mp4" />
+        Seu navegador não suporta a reprodução de vídeos.
+      </video>
+      <div class="modal__info">
+        <p class="modal__badge">Demonstração</p>
+        <h3 id="demo-modal-title">Corte Prime</h3>
+        <p class="modal__cat">Site comercial / Landing Page</p>
+        <div class="projeto-tags" aria-label="Tecnologias utilizadas">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <p class="modal__desc">Landing page demonstrativa criada para apresentar uma solução de site profissional para negócios locais. O projeto inclui hero com chamada direta para o WhatsApp, catálogo de serviços com preços, seção sobre com diferenciais, galeria de trabalhos com visualização ampliada, depoimentos de clientes, localização com mapa e horários de funcionamento, além de contato via WhatsApp e Instagram. Layout 100% responsivo, com menu mobile, animações suaves de rolagem e número de WhatsApp centralizado em um único arquivo de configuração para facilitar a personalização por cliente.</p>
+        <ul class="modal__features">
+          <li>Agendamento via WhatsApp com mensagem pronta por serviço</li>
+          <li>Catálogo de serviços com preços e destaque para o mais pedido</li>
+          <li>Galeria com lightbox e selo de "aberto agora" conforme o horário</li>
+          <li>Mapa, horários de funcionamento e contato em layout mobile-first</li>
+        </ul>
+        <!-- CONFIGURAR: a URL real da demonstração é definida em DEMO_URL (inte.js).
+             Enquanto não configurada, o botão fica desabilitado. -->
+        <a class="btn" href="#" data-demo-link>Visitar demonstração</a>
+      </div>
+    </div>
+  </div>
 
   <script src="inte.js"></script>
 </body>
