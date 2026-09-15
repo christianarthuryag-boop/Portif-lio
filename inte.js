@@ -84,8 +84,8 @@ const DEMO_URL = '';
   }
 
   if (previewVideo && previewBtn && canHover && !reducedMotion) {
-    // Mostra o vídeo somente quando ele realmente começa a tocar;
-    // se o arquivo ainda não existir, a capa mock continua visível.
+    // A capa (poster) aparece por padrão; o ícone ▶ some quando o vídeo começa a tocar.
+    // Se o arquivo de vídeo ainda não existir, a capa mock continua visível atrás.
     previewVideo.addEventListener('playing', () => previewBtn.classList.add('is-playing'));
     previewVideo.addEventListener('error', stopPreview);
     previewBtn.addEventListener('mouseenter', () => {
