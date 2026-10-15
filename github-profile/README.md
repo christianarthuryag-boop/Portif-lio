@@ -21,8 +21,11 @@ O código local inclui catálogo, leitores de texto e imagens, biblioteca, perfi
 
 ## Outros projetos
 
+- **Corte Prime:** conceito independente de barbearia premium, com serviços, galeria e exploração de agendamento sem reservas. [Código público da demo](https://github.com/christianarthuryag-boop/Portif-lio/tree/main/demos/corte-prime).
+- **Pata & Afeto:** landing page acolhedora para um pet shop fictício. Ilustrações originais, menu mobile, serviços, galeria e seleção demonstrativa local, sem coleta de dados. [Código público da demo](https://github.com/christianarthuryag-boop/Portif-lio/tree/main/demos/pata-e-afeto).
 - **[Portfólio](https://github.com/christianarthuryag-boop/Portif-lio):** minha apresentação profissional, desenvolvida com HTML semântico, CSS responsivo e JavaScript sem frameworks.
-- **Corte Prime:** demonstração de landing page para barbearias, incluída no repositório do portfólio em `demos/corte-prime/`. Negócio fictício, sem cliente real, agendamento ou pagamento.
+
+As demos são negócios fictícios, sem clientes reais, agendamentos ou pagamentos. Os links de código apontam para `main` e devem ser conferidos após a publicação das alterações; este README ainda é uma preparação local.
 
 ## Como posso ajudar
 

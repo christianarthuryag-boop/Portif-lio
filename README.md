@@ -11,14 +11,17 @@ cd ~/Projetos/Portif-lio
 python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
-Abra http://127.0.0.1:8080 . A demo fica em http://127.0.0.1:8080/demos/corte-prime/ . Encerre com Ctrl+C. Também é possível abrir `index.html` diretamente no navegador.
+Abra http://127.0.0.1:8080 . As demos ficam em http://127.0.0.1:8080/demos/corte-prime/ e http://127.0.0.1:8080/demos/pata-e-afeto/ . Encerre com Ctrl+C. Também é possível abrir `index.html` diretamente no navegador.
 
 ## Estrutura
 
 - `index.html`, `style.css`, `inte.js`: portfólio, estilos responsivos e interações.
 - `assets/images/`: imagens WebP otimizadas e sem metadados pessoais.
 - `assets/videos/`: gravação original do Corte Prime, carregada apenas sob demanda.
-- `demos/corte-prime/`: demonstração navegável independente, sem dados privados, bibliotecas externas ou reservas.
+- `demos/corte-prime/`: conceito de barbearia premium, preservado.
+- `demos/pata-e-afeto/`: conceito de pet shop em creme, menta, coral e amarelo; ilustrações originais, serviços, galeria e interações locais sem reservas.
+- `scripts/site-files.json`: lista explícita dos arquivos que podem entrar no site publicado.
+- `.github/workflows/pages.yml`: workflow manual preparado, ainda não executado.
 - `github-profile/README.md`: conteúdo preparado para o futuro repositório especial do perfil.
 - `docs/`: auditoria, entrega, testes e instruções de publicação.
 - `imagens/`: arquivos originais preservados; não são necessários ao novo layout. Mantidos para não descartar material original sem necessidade.
@@ -33,6 +36,8 @@ HTML, CSS e JavaScript nativos. Sem frameworks, fontes remotas, analytics, formu
 
 **Corte Prime:** conceito independente de barbearia premium em preto, grafite e bronze, com menu mobile, serviços e preços demonstrativos, galeria vetorial autoral ampliável e exploração de agendamento sem reservas. A demo navegável não contém avaliações inventadas, endereço, telefone comercial ou pagamentos. O vídeo original registra a versão anterior, com dados demonstrativos, e isso é informado no modal. Sem faixa de áudio, segundo inspeção de mídia; não há narração a transcrever.
 
+**Pata & Afeto:** pet shop fictício com identidade acolhedora, quatro serviços, diferenciais de conceito, galeria ampliável e dicas para a visita. O visitante pode escolher um serviço no agendamento demonstrativo e receber feedback local, sem formulário, telefone comercial, envio de dados ou reserva. SVGs originais com origem documentada em [demos/pata-e-afeto/README.md](demos/pata-e-afeto/README.md).
+
 **Portfólio:** este repositório público. Contatos conservados do HTML original; WhatsApp e e-mail não tiveram titularidade ou entregabilidade reconfirmadas. LinkedIn antigo omitido até reconfirmação.
 
 ## Validação
@@ -42,6 +47,11 @@ Ver [docs/TESTES.md](docs/TESTES.md) para resultados e limitações e [docs/AUDI
 ```bash
 node --check inte.js
 node --check demos/corte-prime/demo.js
+node --check demos/pata-e-afeto/app.js
+python3 scripts/check-static.py
+python3 scripts/build-pages.py
+python3 scripts/check-static.py --root dist
+python3 scripts/check-pages.py
 ```
 
 ## Refinamento do Corte Prime
@@ -55,6 +65,14 @@ bash scripts/prepare-corte-comparison.sh
 ```
 
 Com o servidor local ativo, abra http://127.0.0.1:8080/.local/revisao.html . São versões navegáveis lado a lado, não capturas. Para gerar oito capturas reais usando Playwright já disponível, consulte o relatório do refinamento.
+
+## Preparar GitHub Pages
+
+`python3 scripts/build-pages.py` gera `dist/` apenas com os 23 arquivos listados em `scripts/site-files.json` e `.nojekyll`. Documentação, scripts, perfil preparado, arquivos de revisão e imagens antigas não utilizadas ficam fora do site. Não há build de framework nem dependência a instalar.
+
+`python3 scripts/check-pages.py` verifica o conteúdo exato do artefato e a resolução de links sob `/Portif-lio/`. Isso é uma verificação estática, não um deploy real. As três páginas usam caminhos relativos.
+
+O workflow preparado possui somente disparo manual e confirmação de publicação; não roda automaticamente em push. A configuração Pages já existente precisa ser conferida antes de um futuro push/merge, pois pode ter outro gatilho de publicação. Para executar o QA em CachyOS e simular o subcaminho, consulte [docs/PATA-E-AFETO-E-PAGES.md](docs/PATA-E-AFETO-E-PAGES.md).
 
 ## Licença e publicação
 
