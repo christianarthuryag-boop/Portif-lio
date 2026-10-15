@@ -1,0 +1,21 @@
+# Dependências e saídas locais
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+.local/
+# Dados e credenciais (nunca versionar)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite
+*.sqlite-*
+*.db
+uploads/
+# Editor / sistema
+.DS_Store
+Thumbs.db
+*.log
