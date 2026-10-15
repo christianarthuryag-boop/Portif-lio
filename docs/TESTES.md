@@ -37,3 +37,7 @@ Alternativamente, com `playwright` já disponível no Node: `node scripts/browse
 Para testar por HTTP, execute o servidor descrito no README em outro terminal e use `PORTFOLIO_QA_URL=http://127.0.0.1:8080/` junto às variáveis acima.
 
 Conferência manual complementar: navegar somente com Tab/Shift+Tab/Enter/Escape; zoom 200%; leitor de tela; conferir contraste em todos os estados; abrir contatos e site público; confirmar origem/licença das imagens e vídeo antes de publicar. Executar no host é uma pendência de validação, não um resultado aprovado nesta sessão.
+
+## Etapa posterior — refinamento do Corte Prime
+
+O novo estado da demo e os ajustes pontuais do portfólio estão registrados em [REFINAMENTO-CORTE-PRIME.md](REFINAMENTO-CORTE-PRIME.md). A identidade principal foi preservada. O roteiro `scripts/browser-qa.cjs` agora cobre também menu mobile, todos os botões de agendamento e galeria da demo. A tentativa de navegador desta etapa voltou a ser bloqueada por permissão: testes visuais e capturas continuam pendentes. Comparação ao vivo preparada em `.local/revisao.html`; não confundir com evidência de capturas ou aprovação visual.

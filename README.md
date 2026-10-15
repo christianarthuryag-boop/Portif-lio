@@ -31,7 +31,7 @@ HTML, CSS e JavaScript nativos. Sem frameworks, fontes remotas, analytics, formu
 
 **Lunari:** projeto principal privado. Funcionalidades descritas foram verificadas no código local, sem copiar código ou dados. A versão 4.0 e SQLite são identificados como desenvolvimento local. O acesso ao site público não foi reconfirmado. A imagem é o visual de marca do projeto, não uma captura da produção.
 
-**Corte Prime:** negócio fictício. A demo navegável não contém avaliações inventadas, endereço, telefone comercial ou pagamentos. O vídeo original registra a versão anterior, com dados demonstrativos, e isso é informado no modal. Sem faixa de áudio, segundo inspeção de mídia; não há narração a transcrever.
+**Corte Prime:** conceito independente de barbearia premium em preto, grafite e bronze, com menu mobile, serviços e preços demonstrativos, galeria vetorial autoral ampliável e exploração de agendamento sem reservas. A demo navegável não contém avaliações inventadas, endereço, telefone comercial ou pagamentos. O vídeo original registra a versão anterior, com dados demonstrativos, e isso é informado no modal. Sem faixa de áudio, segundo inspeção de mídia; não há narração a transcrever.
 
 **Portfólio:** este repositório público. Contatos conservados do HTML original; WhatsApp e e-mail não tiveram titularidade ou entregabilidade reconfirmadas. LinkedIn antigo omitido até reconfirmação.
 
@@ -43,6 +43,18 @@ Ver [docs/TESTES.md](docs/TESTES.md) para resultados e limitações e [docs/AUDI
 node --check inte.js
 node --check demos/corte-prime/demo.js
 ```
+
+## Refinamento do Corte Prime
+
+O design principal do portfólio foi preservado. Consulte [docs/REFINAMENTO-CORTE-PRIME.md](docs/REFINAMENTO-CORTE-PRIME.md) para mudanças, testes e limitações. A demo usa ilustrações SVG criadas para este projeto, sem fontes, fotos ou dependências externas. Não representam fotos de trabalhos ou clientes.
+
+Para preparar a comparação local antes/depois, sem reverter commits:
+
+```bash
+bash scripts/prepare-corte-comparison.sh
+```
+
+Com o servidor local ativo, abra http://127.0.0.1:8080/.local/revisao.html . São versões navegáveis lado a lado, não capturas. Para gerar oito capturas reais usando Playwright já disponível, consulte o relatório do refinamento.
 
 ## Licença e publicação
 
