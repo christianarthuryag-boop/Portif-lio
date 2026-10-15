@@ -1,5 +1,9 @@
 # Christian Arthur — Portfólio
 
+## Site público
+
+[Portfólio](https://christianarthuryag-boop.github.io/Portif-lio/) · [Corte Prime](https://christianarthuryag-boop.github.io/Portif-lio/demos/corte-prime/) · [Pata & Afeto](https://christianarthuryag-boop.github.io/Portif-lio/demos/pata-e-afeto/)
+
 Portfólio profissional de um desenvolvedor web em início de carreira: projetos reais, serviços de frontend e contato direto. Redesign com identidade escura, verde suave e foco em legibilidade e mobile.
 
 ## Executar localmente
@@ -21,7 +25,7 @@ Abra http://127.0.0.1:8080 . As demos ficam em http://127.0.0.1:8080/demos/corte
 - `demos/corte-prime/`: conceito de barbearia premium, preservado.
 - `demos/pata-e-afeto/`: conceito de pet shop em creme, menta, coral e amarelo; ilustrações originais, serviços, galeria e interações locais sem reservas.
 - `scripts/site-files.json`: lista explícita dos arquivos que podem entrar no site publicado.
-- `.github/workflows/pages.yml`: workflow manual preparado, ainda não executado.
+- `.github/workflows/pages.yml`: workflow manual de publicação no Pages.
 - `github-profile/README.md`: conteúdo preparado para o futuro repositório especial do perfil.
 - `docs/`: auditoria, entrega, testes e instruções de publicação.
 - `imagens/`: arquivos originais preservados; não são necessários ao novo layout. Mantidos para não descartar material original sem necessidade.
@@ -78,4 +82,4 @@ O workflow preparado possui somente disparo manual e confirmação de publicaç�
 
 O repositório original não declara licença. Nenhuma foi adicionada: escolha de licença e direitos de imagens/vídeos devem ser confirmados pelo autor antes de conceder permissão de reutilização.
 
-Nada foi enviado ao GitHub, criado remotamente ou publicado nesta missão. O repositório já tem GitHub Pages habilitado nos metadados: um futuro push pode acionar a publicação existente. Consulte [docs/PUBLICACAO.md](docs/PUBLICACAO.md) antes de publicar.
+Os commits do portfólio foram integrados à main. O endereço configurado no Pages está acima; o resultado de cada implantação pode ser consultado no GitHub Actions. Consulte [docs/PUBLICACAO.md](docs/PUBLICACAO.md) antes de publicar.
