@@ -1,32 +1,36 @@
-# Preparação do GitHub e publicação
+# Publicação preparada — exige confirmação final
 
-Nenhuma ação remota foi executada. Nenhuma renomeação ou mudança de licença.
+Nenhum push, merge, deploy, criação de repositório ou alteração de configuração remota foi executado. Branch local: `redesign/apresentacao-profissional`.
 
-## Perfil
+## Conteúdo proposto para publicação
 
-A consulta ao repositório especial `christianarthuryag-boop/christianarthuryag-boop` retornou 404. Pode estar ausente ou inacessível; não foi criado. O README está pronto em `github-profile/README.md`.
+O site contém, nesta ordem: Lunari (projeto privado apresentado, sem código), Corte Prime (barbearia fictícia), Pata & Afeto (pet shop fictício) e o próprio portfólio. Contatos pessoais são os já configurados no portfólio original. A versão 4.0 da Lunari e SQLite permanecem identificados como locais.
 
-Depois de aprovação explícita: criar o repositório público com exatamente esse nome, copiar o README preparado para a raiz e publicar. O diretório `github-profile/` neste checkout é apenas material de preparação, não um repositório remoto.
+O artefato `dist/` tem somente os 23 arquivos de runtime de `scripts/site-files.json` mais `.nojekyll`: HTML, CSS, JS, SVGs, três WebP do portfólio e o vídeo original da demo Corte Prime. Não inclui `.git`, `.local`, docs, scripts, github-profile, backups, dados privados ou código da Lunari.
 
-Bio sugerida: “Desenvolvedor web em início de carreira | HTML, CSS e JavaScript | Landing pages e sites responsivos | Criador da Lunari”.
+**O push do repositório é diferente do artefato do site.** Um push desta branch também envia commits, README, scripts, workflow, perfil preparado e documentação técnica versionada. Os relatórios técnicos das etapas anteriores permanecem no histórico; não contêm bancos, segredos ou código privado e não entram no artefato Pages. Exclusão de arquivo no último commit não remove seu conteúdo do histórico; não foi feita reescrita. Arquivos realmente internos/de revisão devem permanecer em `.local/`, ignorado pelo Git. Nunca usar `git add -f` para incluí-los.
 
-Fixar Portif-lio no perfil. Não apontar para repositório público da Lunari: o código é privado. Só preencher Website com a URL final confirmada do portfólio. Reconfirmar WhatsApp, e-mail e eventual LinkedIn antes da publicação; não houve envio de mensagem para testar contatos.
+## GitHub Pages
 
-## Repositório Portif-lio
+O workflow `.github/workflows/pages.yml` foi preparado com `workflow_dispatch`, confirmação booleana e sem gatilho automático de push. Publica somente `dist/`. Ele não foi enviado nem executado.
 
-Descrição sugerida: “Portfólio de Christian Arthur: projetos, desenvolvimento web e serviços de frontend. HTML, CSS e JavaScript, com demo de landing page.”
+Após aprovação:
 
-Topics sugeridos: `portfolio`, `frontend`, `html`, `css`, `javascript`, `responsive-design`.
+1. Conferir a configuração Pages atual antes de enviar/mesclar mudanças. Metadados consultados na auditoria anterior indicavam Pages habilitado; a origem atual não foi reconfirmada. Outro gatilho preexistente pode publicar após um push.
+2. Enviar a branch autorizada e revisar os commits sem reescrever histórico.
+3. Após aprovação para merge/publicação, disponibilizar o workflow na branch apropriada e configurar Settings → Pages → Source como GitHub Actions. Essa alteração remota precisa de autorização.
+4. Executar manualmente “Publicar portfolio no GitHub Pages”, marcar a confirmação e aguardar o resultado.
+5. Confirmar a URL retornada. Só então atualizar Website, canonical e metadados sociais absolutos, se desejado. URLs não foram inventadas.
+6. Validar site, demos, contatos e console na publicação efetiva.
 
-Não renomear automaticamente. Uma possível mudança futura para `portfolio` exigiria revisar Pages, links e redirecionamentos. Sem licença original: decidir separadamente, inclusive direitos dos materiais visuais; não presumir MIT.
+A montagem e o workflow seguem a [documentação oficial de workflows personalizados do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages). A validação local de `/Portif-lio/` não equivale a publicação ou execução no ambiente GitHub.
 
-## Antes de qualquer push
+## Perfil GitHub
 
-1. Revisar a branch `redesign/apresentacao-profissional`, os commits e `docs/TESTES.md`.
-2. Aprovar contatos, textos e uso do visual de marca da Lunari, sem arquivos privados.
-3. Dar autorização explícita para push e para publicação. Os metadados remotos já indicam Pages habilitado; verificar a configuração existente, pois um push pode publicar automaticamente.
-4. Após aprovação, enviar a branch e revisar/mesclar conforme combinado. Não reescrever histórico.
-5. Confirmar a URL pública final; só então adicionar canonical, og:url e og:image com URLs absolutas corretas. Não foram inventadas URLs de implantação nesta entrega.
-6. Separadamente, aprovar criação do repositório especial, publicação do README e mudanças na bio/descrição/topics.
+`github-profile/README.md` está atualizado com Lunari, Corte Prime, Pata & Afeto e portfólio. O repositório especial não foi criado. Seus links para as demos na branch `main` são preparados para publicação e devem ser confirmados após merge, antes de publicar o perfil.
 
-Não são necessários acesso à VPS, mudanças na Lunari ou bancos para publicar o portfólio.
+Criar o repositório `christianarthuryag-boop/christianarthuryag-boop`, publicar seu README, editar a bio ou fixar projetos são ações separadas que exigem autorização. Bio sugerida: “Desenvolvedor web em início de carreira | HTML, CSS e JavaScript | Sites responsivos | Criador da Lunari”.
+
+Descrição sugerida do portfólio: “Projetos e desenvolvimento web de Christian Arthur. HTML, CSS e JavaScript, com demos de barbearia e pet shop.” Topics sugeridos: `portfolio`, `frontend`, `html`, `css`, `javascript`, `responsive-design`.
+
+Sem renomeação de repositório, licença adicionada, acesso à VPS ou alteração da Lunari.

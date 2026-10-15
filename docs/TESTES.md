@@ -41,3 +41,7 @@ Conferência manual complementar: navegar somente com Tab/Shift+Tab/Enter/Escape
 ## Etapa posterior — refinamento do Corte Prime
 
 O novo estado da demo e os ajustes pontuais do portfólio estão registrados em [REFINAMENTO-CORTE-PRIME.md](REFINAMENTO-CORTE-PRIME.md). A identidade principal foi preservada. O roteiro `scripts/browser-qa.cjs` agora cobre também menu mobile, todos os botões de agendamento e galeria da demo. A tentativa de navegador desta etapa voltou a ser bloqueada por permissão: testes visuais e capturas continuam pendentes. Comparação ao vivo preparada em `.local/revisao.html`; não confundir com evidência de capturas ou aprovação visual.
+
+## Etapa Pata & Afeto + preparação Pages
+
+Três páginas verificadas nas fontes e no artefato; pacote com 23 arquivos permitidos + `.nojekyll`, 88 referências resolvidas estaticamente sob `/Portif-lio/`, sintaxe JS, contraste principal, SVGs, ordem dos projetos e YAML manual aprovados. Navegador e HTTP local bloqueados por permissão; responsividade renderizada, console e GitHub Pages real continuam pendentes. Evidências, comandos CachyOS e limites em [PATA-E-AFETO-E-PAGES.md](PATA-E-AFETO-E-PAGES.md).

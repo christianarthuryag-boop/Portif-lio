@@ -1,0 +1,54 @@
+name: Publicar portfolio no GitHub Pages
+
+# Sem execução automática em push. Disparar somente após aprovação do proprietário.
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_publish:
+        description: Confirmo a publicação dos arquivos públicos do portfólio
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: inputs.confirm_publish == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Verificar sintaxe
+        run: |
+          node --check inte.js
+          node --check demos/corte-prime/demo.js
+          node --check demos/pata-e-afeto/app.js
+      - name: Verificar fontes e montar artefato permitido
+        run: |
+          python3 scripts/check-static.py
+          python3 scripts/build-pages.py
+          python3 scripts/check-static.py --root dist
+          python3 scripts/check-pages.py
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    if: inputs.confirm_publish == true
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar artefato
+        id: deployment
+        uses: actions/deploy-pages@v4

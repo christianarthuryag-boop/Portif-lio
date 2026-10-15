@@ -4,8 +4,11 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import re
+import argparse
 
-ROOT = Path(__file__).resolve().parents[1]
+parser = argparse.ArgumentParser()
+parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
+ROOT = parser.parse_args().root.resolve()
 class Document(HTMLParser):
     def __init__(self, path):
         super().__init__(convert_charrefs=True)
@@ -29,7 +32,8 @@ class Document(HTMLParser):
         for key in ('href', 'src', 'poster'):
             if key in a: self.links.append(a[key])
 
-pages = {p.resolve(): Document(p) for p in ROOT.rglob('*.html') if not any(x in p.parts for x in ['node_modules','.local'])}
+pages = {p.resolve(): Document(p) for p in ROOT.rglob('*.html') if not any(x in p.relative_to(ROOT).parts for x in ['node_modules','.local','dist'])}
+assert pages, 'Nenhuma página encontrada no diretório de validação'
 errors, external = [], set()
 for path, doc in pages.items():
     errors += [f'{path.relative_to(ROOT)}: {e}' for e in doc.errors]
@@ -48,7 +52,7 @@ for path, doc in pages.items():
         if url.fragment and target in pages and unquote(url.fragment) not in pages[target].ids:
             errors.append('Âncora inexistente: ' + link)
 for p in ROOT.rglob('*'):
-    if any(x in p.parts for x in ['.git','node_modules','.local']): continue
+    if any(x in p.relative_to(ROOT).parts for x in ['.git','node_modules','.local','dist']): continue
     if p.is_file() and (p.name == '.env' or p.suffix in ['.sqlite','.db','.pem','.key']): errors.append('Arquivo sensível inesperado: ' + str(p.relative_to(ROOT)))
     if p.is_file() and p.suffix in ['.html','.js','.css','.md']:
         s = p.read_text(errors='replace')

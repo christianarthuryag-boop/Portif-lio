@@ -1,0 +1,15 @@
+{
+  "files": [
+    "index.html", "style.css", "inte.js",
+    "assets/favicon.svg",
+    "assets/images/christian.webp", "assets/images/corte-prime.webp", "assets/images/lunari.webp",
+    "assets/videos/corte-prime-demo.mp4",
+    "demos/corte-prime/index.html", "demos/corte-prime/style.css", "demos/corte-prime/demo.js",
+    "demos/corte-prime/assets/favicon.svg", "demos/corte-prime/assets/studio.svg",
+    "demos/corte-prime/assets/tesoura.svg", "demos/corte-prime/assets/navalha.svg",
+    "demos/pata-e-afeto/index.html", "demos/pata-e-afeto/style.css", "demos/pata-e-afeto/app.js",
+    "demos/pata-e-afeto/assets/patinha.svg", "demos/pata-e-afeto/assets/amigos.svg",
+    "demos/pata-e-afeto/assets/cachorro.svg", "demos/pata-e-afeto/assets/gato.svg",
+    "demos/pata-e-afeto/assets/dupla.svg"
+  ]
+}
