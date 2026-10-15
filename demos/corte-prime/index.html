@@ -4,12 +4,13 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <meta content="noindex" name="robots"/>
-  <meta content="Corte Prime: demonstração de landing page para barbearias por Christian Arthur. Negócio fictício." name="description"/>
-  <meta content="#171613" name="theme-color"/>
+  <meta content="Corte Prime — conceito de barbearia premium. Explore serviços, identidade e uma experiência de agendamento demonstrativa. Negócio fictício." name="description"/>
+  <meta content="#111111" name="theme-color"/>
   <title>
-   Corte Prime — Demonstração de landing page
+   Corte Prime — Estilo com assinatura | Demo
   </title>
-  <link href="../../assets/favicon.svg" rel="icon"/>
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link as="image" href="assets/studio.svg" rel="preload"/>
   <link href="style.css" rel="stylesheet"/>
   <script defer="" src="demo.js">
   </script>
@@ -19,243 +20,548 @@
    Pular para o conteúdo
   </a>
   <div class="demo-banner">
-   DEMONSTRAÇÃO · Negócio e valores fictícios ·
+   <span>
+    PROJETO DEMONSTRATIVO · NEGÓCIO FICTÍCIO
+   </span>
    <a href="../../index.html#projetos">
-    Voltar ao portfólio ↗
+    Voltar ao portfólio
+    <span aria-hidden="true">
+     ↗
+    </span>
    </a>
   </div>
-  <header>
-   <a class="logo" href="#inicio">
-    CORTE
-    <span>
-     PRIME
+  <header class="header shell">
+   <a aria-label="Corte Prime, início" class="logo" href="#inicio">
+    <span aria-hidden="true" class="logo-mark">
+     CP
     </span>
-    <small>
-     BARBEARIA / CONCEITO
-    </small>
+    <span>
+     CORTE PRIME
+     <small>
+      BARBEARIA · CONCEITO
+     </small>
+    </span>
    </a>
-   <nav aria-label="Principal">
+   <button aria-controls="menu" aria-expanded="false" class="menu-toggle" hidden="" type="button">
+    Menu
+    <span aria-hidden="true">
+     ☰
+    </span>
+   </button>
+   <nav aria-label="Navegação principal" id="menu">
     <a href="#servicos">
      Serviços
     </a>
-    <a href="#proposta">
-     A proposta
+    <a href="#essencia">
+     Essência
     </a>
-    <a href="#interesse">
-     Conhecer a experiência ↗
+    <a href="#galeria">
+     Galeria
+    </a>
+    <a class="nav-cta" href="#agendamento">
+     Agendamento demo
+     <span aria-hidden="true">
+      ↗
+     </span>
     </a>
    </nav>
   </header>
   <main id="conteudo">
-   <section class="hero" id="inicio">
-    <div>
+   <section aria-labelledby="titulo" class="hero shell" id="inicio">
+    <div class="hero-copy">
      <p class="eyebrow">
-      TRADIÇÃO NO CUIDADO. ATITUDE NO ESTILO.
+      <span aria-hidden="true" class="rule">
+      </span>
+      PRECISÃO EM CADA DETALHE
      </p>
-     <h1>
-      Seu estilo.
+     <h1 id="titulo">
+      Estilo é
       <br/>
-      Nosso
       <em>
-       conceito.
+       assinatura.
       </em>
      </h1>
-     <p>
-      Uma proposta de presença digital para barbearias que valorizam cada detalhe.
+     <p class="hero-description">
+      Do clássico ao contemporâneo. Corte, barba e acabamento em uma proposta feita para expressar personalidade.
      </p>
-     <a class="button" href="#servicos">
-      Explore os serviços
+     <div class="hero-actions">
+      <a class="button" href="#agendamento">
+       Explorar agendamento
+       <span aria-hidden="true">
+        ↗
+       </span>
+      </a>
+      <a class="quiet-link" href="#servicos">
+       Conheça os serviços
+       <span aria-hidden="true">
+        ↓
+       </span>
+      </a>
+     </div>
+     <p class="demo-note">
+      Experiência demonstrativa. Sem reservas ou atendimento real.
+     </p>
+     <div class="hero-signature">
       <span aria-hidden="true">
-       ↓
+       ✳
       </span>
-     </a>
-     <p class="note">
-      Projeto de interface. Não representa uma barbearia em funcionamento.
-     </p>
+      <p>
+       CORTE · BARBA · IDENTIDADE
+       <small>
+        Um conceito de cuidado, do início ao acabamento.
+       </small>
+      </p>
+     </div>
     </div>
-    <div aria-hidden="true" class="barber-mark">
-     <span>
-      CP
-     </span>
-     <p>
-      CORTE PRIME
-     </p>
-     <small>
-      CORTE · BARBA · ESTILO
-     </small>
-    </div>
-   </section>
-   <section id="servicos">
-    <p class="eyebrow">
-     01 / MENU DE SERVIÇOS
-    </p>
-    <h2>
-     O cuidado está nos
-     <em>
-      detalhes.
-     </em>
-    </h2>
-    <p>
-     Exemplos para demonstrar a organização de um catálogo comercial.
-    </p>
-    <div class="services">
-     <article>
+    <figure class="hero-visual">
+     <img alt="Ilustração de um ambiente de barbearia com cadeira clássica, espelho em arco e iluminação quente" fetchpriority="high" height="960" src="assets/studio.svg" width="800"/>
+     <figcaption>
       <span>
-       01 / CLÁSSICO
+       THE PRIME CONCEPT
       </span>
+      <span>
+       ILUSTRAÇÃO AUTORAL / 01
+      </span>
+     </figcaption>
+     <span aria-hidden="true" class="visual-seal">
+      CP
+      <small>
+       O ESTILO ESTÁ NO DETALHE
+      </small>
+     </span>
+    </figure>
+   </section>
+   <div aria-hidden="true" class="brand-line shell">
+    <span>
+     CLÁSSICO NA ESSÊNCIA
+    </span>
+    <span>
+     ✳
+    </span>
+    <span>
+     ATUAL NA ATITUDE
+    </span>
+    <span>
+     ✳
+    </span>
+    <span>
+     PRECISO NO ACABAMENTO
+    </span>
+   </div>
+   <section aria-labelledby="servicos-title" class="section shell" id="servicos">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       01 / O MENU
+      </p>
+      <h2 id="servicos-title">
+       Seu próximo
+       <br/>
+       <em>
+        visual começa aqui.
+       </em>
+      </h2>
+     </div>
+     <p>
+      Escolha um serviço para explorar a experiência.
+      <br/>
+      Todos os preços são demonstrativos.
+     </p>
+    </div>
+    <div class="services">
+     <article class="service-card">
+      <div class="service-top">
+       <span class="service-number">
+        01
+       </span>
+       <span class="service-category">
+        CORTE
+       </span>
+      </div>
       <h3>
        Corte masculino
       </h3>
       <p>
-       Uma apresentação objetiva do serviço, com espaço para explicar técnicas e acabamento.
+       Linhas bem definidas, proporção e acabamento. Uma proposta que vai do corte clássico ao degradê.
       </p>
-      <div>
+      <ul>
+       <li>
+        Definição do estilo
+       </li>
+       <li>
+        Corte e acabamento
+       </li>
+      </ul>
+      <div class="price">
        <strong>
-        R$ 40
-        <small>
-         valor ilustrativo
-        </small>
+        <span>
+         R$
+        </span>
+        40
        </strong>
-       <button data-service="Corte masculino" hidden="" type="button">
-        Ver serviço ↗
-       </button>
+       <small>
+        preço demonstrativo
+       </small>
       </div>
+      <a class="service-button" data-service="Corte masculino" href="#agendamento">
+       Explorar agendamento
+       <span aria-hidden="true">
+        ↗
+       </span>
+      </a>
      </article>
-     <article>
-      <span>
-       02 / ACABAMENTO
-      </span>
+     <article class="service-card">
+      <div class="service-top">
+       <span class="service-number">
+        02
+       </span>
+       <span class="service-category">
+        BARBA
+       </span>
+      </div>
       <h3>
-       Barba
+       Barba &amp; contorno
       </h3>
       <p>
-       Descrição do cuidado e do acabamento, para o visitante entender o que está incluído.
+       Desenho, alinhamento e atenção aos contornos para uma composição que acompanha o seu rosto.
       </p>
-      <div>
+      <ul>
+       <li>
+        Desenho e alinhamento
+       </li>
+       <li>
+        Finalização dos contornos
+       </li>
+      </ul>
+      <div class="price">
        <strong>
-        R$ 30
-        <small>
-         valor ilustrativo
-        </small>
+        <span>
+         R$
+        </span>
+        30
        </strong>
-       <button data-service="Barba" hidden="" type="button">
-        Ver serviço ↗
-       </button>
+       <small>
+        preço demonstrativo
+       </small>
       </div>
+      <a class="service-button" data-service="Barba &amp; contorno" href="#agendamento">
+       Explorar agendamento
+       <span aria-hidden="true">
+        ↗
+       </span>
+      </a>
      </article>
-     <article>
-      <span>
-       03 / COMPLETO
-      </span>
+     <article class="service-card service-card--signature">
+      <div class="service-top">
+       <span class="service-number">
+        03
+       </span>
+       <span class="service-category">
+        O RITUAL COMPLETO
+       </span>
+      </div>
       <h3>
        Corte + barba
       </h3>
       <p>
-       Uma opção combinada, apresentada com clareza para facilitar a escolha do visitante.
+       Um visual pensado por inteiro. Corte e barba em harmonia, com o cuidado de um acabamento completo.
       </p>
-      <div>
+      <ul>
+       <li>
+        Corte masculino
+       </li>
+       <li>
+        Barba e acabamento
+       </li>
+      </ul>
+      <div class="price">
        <strong>
-        R$ 65
-        <small>
-         valor ilustrativo
-        </small>
+        <span>
+         R$
+        </span>
+        65
        </strong>
-       <button data-service="Corte + barba" hidden="" type="button">
-        Ver serviço ↗
-       </button>
+       <small>
+        preço demonstrativo
+       </small>
       </div>
+      <a class="service-button" data-service="Corte + barba" href="#agendamento">
+       Explorar agendamento
+       <span aria-hidden="true">
+        ↗
+       </span>
+      </a>
      </article>
     </div>
    </section>
-   <section class="proposal" id="proposta">
-    <p class="eyebrow">
-     02 / A PROPOSTA
-    </p>
-    <h2>
-     Uma página simples.
-     <br/>
-     Uma identidade
-     <em>
-      marcante.
-     </em>
-    </h2>
-    <p>
-     Esta demonstração explora hierarquia visual, contraste e adaptação para celular. Em um projeto real, textos, imagens, valores e canais de agendamento seriam definidos com o negócio.
-    </p>
-    <div class="principles">
-     <p>
-      <strong>
-       01
-      </strong>
-      Serviços fáceis de encontrar.
-     </p>
-     <p>
-      <strong>
-       02
-      </strong>
-      Navegação direta em qualquer tela.
-     </p>
-     <p>
-      <strong>
-       03
-      </strong>
-      Identidade consistente do início ao fim.
-     </p>
+   <section aria-labelledby="essencia-title" class="essence" id="essencia">
+    <div class="shell essence-layout">
+     <div>
+      <p class="eyebrow">
+       02 / A ESSÊNCIA
+      </p>
+      <h2 id="essencia-title">
+       O detalhe separa
+       <br/>
+       o comum do
+       <em>
+        marcante.
+       </em>
+      </h2>
+     </div>
+     <div>
+      <p class="essence-lead">
+       Corte Prime é um conceito de barbearia que combina o caráter do clássico com uma linguagem contemporânea.
+      </p>
+      <p>
+       Preto, grafite e bronze. Formas precisas. Uma atmosfera de cuidado traduzida em cada escolha visual.
+      </p>
+      <div class="principles">
+       <div>
+        <span>
+         01
+        </span>
+        <h3>
+         Personalidade
+        </h3>
+        <p>
+         Um visual que carrega identidade.
+        </p>
+       </div>
+       <div>
+        <span>
+         02
+        </span>
+        <h3>
+         Precisão
+        </h3>
+        <p>
+         Atenção às linhas e ao acabamento.
+        </p>
+       </div>
+       <div>
+        <span>
+         03
+        </span>
+        <h3>
+         Presença
+        </h3>
+        <p>
+         Uma experiência visual consistente.
+        </p>
+       </div>
+      </div>
+     </div>
     </div>
    </section>
-   <section class="interest" id="interesse">
-    <p class="eyebrow">
-     03 / GOSTOU DA PROPOSTA?
-    </p>
-    <h2>
-     Seu negócio pode ter
-     <br/>
-     uma página
-     <em>
-      com personalidade.
-     </em>
-    </h2>
-    <p>
-     Converse com Christian Arthur para definir o escopo de um site para o seu negócio.
-    </p>
-    <a class="button" href="../../index.html#contato">
-     Falar com o desenvolvedor ↗
-    </a>
+   <section aria-labelledby="galeria-title" class="section shell" id="galeria">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       03 / UNIVERSO CORTE PRIME
+      </p>
+      <h2 id="galeria-title">
+       Uma atmosfera.
+       <br/>
+       <em>
+        Vários detalhes.
+       </em>
+      </h2>
+     </div>
+     <p>
+      Estudos visuais autorais da marca.
+      <br/>
+      Ilustrações de conceito, sem fotos de clientes.
+     </p>
+    </div>
+    <div class="gallery">
+     <figure>
+      <a aria-label="Ampliar ilustração do ambiente" data-gallery="" href="assets/studio.svg">
+       <img alt="Estudo visual do ambiente: cadeira, espelho e tons de bronze" height="960" loading="lazy" src="assets/studio.svg" width="800"/>
+       <span aria-hidden="true" class="gallery-zoom">
+        ↗
+       </span>
+      </a>
+      <figcaption>
+       <span>
+        01 / O AMBIENTE
+       </span>
+       <strong>
+        Clássico, reinterpretado.
+       </strong>
+      </figcaption>
+     </figure>
+     <figure>
+      <a aria-label="Ampliar ilustração da tesoura" data-gallery="" href="assets/tesoura.svg">
+       <img alt="Ilustração autoral de uma tesoura metálica sobre fundo grafite" height="720" loading="lazy" src="assets/tesoura.svg" width="640"/>
+       <span aria-hidden="true" class="gallery-zoom">
+        ↗
+       </span>
+      </a>
+      <figcaption>
+       <span>
+        02 / A PRECISÃO
+       </span>
+       <strong>
+        O cuidado em cada linha.
+       </strong>
+      </figcaption>
+     </figure>
+     <figure>
+      <a aria-label="Ampliar ilustração da navalha" data-gallery="" href="assets/navalha.svg">
+       <img alt="Ilustração autoral de uma navalha clássica com cabo em bronze" height="720" loading="lazy" src="assets/navalha.svg" width="640"/>
+       <span aria-hidden="true" class="gallery-zoom">
+        ↗
+       </span>
+      </a>
+      <figcaption>
+       <span>
+        03 / O ACABAMENTO
+       </span>
+       <strong>
+        A assinatura do detalhe.
+       </strong>
+      </figcaption>
+     </figure>
+    </div>
+   </section>
+   <section aria-labelledby="agendamento-title" class="booking shell" id="agendamento">
+    <div aria-hidden="true" class="booking-mark">
+     CP
+    </div>
+    <div>
+     <p class="eyebrow">
+      04 / EXPLORE A EXPERIÊNCIA
+     </p>
+     <h2 id="agendamento-title">
+      O próximo passo
+      <br/>
+      é
+      <em>
+       o seu estilo.
+      </em>
+     </h2>
+     <p>
+      Explore como os serviços podem ser apresentados antes do contato com uma barbearia. Esta demo não consulta horários nem cria reservas.
+     </p>
+     <button class="button" data-service="Escolha seu serviço" hidden="" type="button">
+      Ver opções de agendamento
+      <span aria-hidden="true">
+       ↗
+      </span>
+     </button>
+     <noscript>
+      <p>
+       Os serviços e valores demonstrativos estão no
+       <a href="#servicos">
+        menu de serviços
+       </a>
+       . Esta página não realiza agendamentos.
+      </p>
+     </noscript>
+     <small>
+      Nenhum dado pessoal é solicitado.
+     </small>
+    </div>
    </section>
   </main>
-  <footer>
-   <span>
-    CORTE PRIME / CONCEITO
-   </span>
-   <p>
-    Demonstração por Christian Arthur. Sem agendamento ou pagamento.
-   </p>
-   <a href="../../index.html#projetos">
-    Voltar ao portfólio ↑
-   </a>
+  <footer class="footer shell">
+   <div class="footer-top">
+    <a aria-label="Corte Prime, voltar ao início" class="logo" href="#inicio">
+     <span aria-hidden="true" class="logo-mark">
+      CP
+     </span>
+     <span>
+      CORTE PRIME
+      <small>
+       BARBEARIA · CONCEITO
+      </small>
+     </span>
+    </a>
+    <p>
+     Clássico na essência.
+     <br/>
+     Preciso no detalhe.
+    </p>
+    <a class="quiet-link" href="#inicio">
+     Voltar ao topo
+     <span aria-hidden="true">
+      ↑
+     </span>
+    </a>
+   </div>
+   <div class="footer-bottom">
+    <p>
+     Projeto demonstrativo por Christian Arthur.
+     <br/>
+     Negócio e preços fictícios. Sem reservas ou pagamentos.
+    </p>
+    <a href="../../index.html#contato">
+     Quer um site para seu negócio?
+     <span aria-hidden="true">
+      ↗
+     </span>
+    </a>
+   </div>
   </footer>
-  <dialog aria-labelledby="service-title">
-   <button aria-label="Fechar detalhes" class="close" type="button">
-    ✕
-   </button>
-   <p class="eyebrow">
-    EXEMPLO DE INTERAÇÃO
-   </p>
+  <dialog aria-describedby="service-description" aria-labelledby="service-title" id="service-dialog">
+   <div class="dialog-header">
+    <p class="eyebrow">
+     AGENDAMENTO / DEMONSTRAÇÃO
+    </p>
+    <button aria-label="Fechar opções de agendamento" class="close" type="button">
+     ✕
+    </button>
+   </div>
    <h2 id="service-title">
-    Serviço
+    Escolha seu serviço
    </h2>
-   <p>
-    Em uma versão para um negócio real, esta etapa poderia direcionar para o canal de agendamento definido com o cliente.
+   <p id="service-description">
+    Em um site real, a escolha encaminharia para o canal de atendimento definido pela barbearia.
    </p>
-   <p>
-    <strong>
-     Nenhuma reserva foi criada.
-    </strong>
-    Esta é uma demonstração de interface.
+   <ul class="dialog-services">
+    <li>
+     Corte masculino
+     <span>
+      R$ 40
+     </span>
+    </li>
+    <li>
+     Barba &amp; contorno
+     <span>
+      R$ 30
+     </span>
+    </li>
+    <li>
+     Corte + barba
+     <span>
+      R$ 65
+     </span>
+    </li>
+   </ul>
+   <p class="dialog-notice">
+    Valores ilustrativos. Não há horários disponíveis para consulta e nenhuma reserva será criada.
    </p>
    <button class="button close" type="button">
     Continuar explorando
+    <span aria-hidden="true">
+     ↗
+    </span>
    </button>
+  </dialog>
+  <dialog aria-labelledby="gallery-title" id="gallery-dialog">
+   <div class="dialog-header">
+    <h2 id="gallery-title">
+     Ilustração de conceito
+    </h2>
+    <button aria-label="Fechar imagem ampliada" class="close" type="button">
+     ✕
+    </button>
+   </div>
+   <img alt="" height="960" id="gallery-image" src="assets/studio.svg" width="800"/>
+   <p>
+    Ilustração autoral · projeto demonstrativo Corte Prime.
+   </p>
   </dialog>
  </body>
 </html>
